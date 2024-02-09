@@ -14,6 +14,43 @@ body{
   width: 100%;
 }
 
+.sistemas{
+  display: flex;
+  align-items: center;
+  gap:30px;
+  justify-content: center;
+  height: 220px;
+  border: 3px solid blue;
+  
+}
+
+.sistemas1{
+border: 3px solid blue;
+height: 150px;
+width: 450px;
+display: grid;
+justify-content: center;
+align-items: center;
+}
+
+
+.sistemas2{
+  border: 3px solid blue;
+  height: 150px;
+  width: 450px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.grafana:hover,
+.zabbix:hover,
+.grafana .zabbix:focus {
+  transform: scale(1.2);
+}
+
+
+
 
   .conteudo{    
     justify-content: center;
@@ -24,6 +61,7 @@ body{
     margin: 0;
     padding: 1rem;
     color: var(--primary);
+    border: 3px solid blue;
     
    
   }
@@ -57,6 +95,8 @@ body{
       border-radius: 0.5rem;
       overflow: hidden;
       background-color: #fff;
+      border: 3px solid blue;
+      width: 450px;
     }
     .tab__label,
     .tab__close {
