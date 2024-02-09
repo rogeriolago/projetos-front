@@ -2,6 +2,18 @@ body{
   font-family: 'Exo', sans-serif;
 }
 
+.head{
+  font-size: 24px;
+  background: #4e54c8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 120px;
+  width: 100%;
+}
+
 
   .conteudo{    
     justify-content: center;
@@ -94,7 +106,7 @@ body{
         transform: rotate(90deg) translate(-.25rem);
       }
     }
-    a {
+    /*a {
       line-height: 1.5;
       margin-left: 30px;
       margin-right: 30px;
@@ -103,7 +115,7 @@ body{
       line-height: 1.5;
       margin-left: 30px;
     }
-    
+    */
     
       /* Estilos para tela de PC */
   @media only screen and (min-width: 768px) {
