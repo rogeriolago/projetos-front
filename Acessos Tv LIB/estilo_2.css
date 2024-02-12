@@ -61,9 +61,21 @@ align-items: center;
     margin: 0;
     padding: 1rem;
     color: var(--primary);
-    border: 3px solid blue;
-    
+    border: 3px solid blue;    
    
+  }
+
+  .conteudo a:link{
+    color:black;
+  }
+
+
+  .conteudo a:visited{
+    color:black;
+  }
+
+  .conteudo a:hover{
+    background-color: aqua;
   }
   
     
