@@ -17,6 +17,7 @@ body{
 .sistemas{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap:30px;
   justify-content: center;
   height: 220px;
@@ -25,12 +26,13 @@ body{
 }
 
 .sistemas1{
-border: 3px solid blue;
-height: 150px;
-width: 450px;
-display: grid;
-justify-content: center;
-align-items: center;
+  display: flex;
+  border: 3px solid blue;
+  height: 150px;
+  width: 450px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -43,10 +45,27 @@ align-items: center;
   align-items: center;
 }
 
-.grafana:hover,
+/* .grafana:hover,
 .zabbix:hover,
 .grafana .zabbix:focus {
   transform: scale(1.2);
+} */
+
+button {
+  display: block;
+  background-color:white;
+  border: 3px solid #4e54c8;
+  border-radius: 20px;
+  width: 90px;
+  color: #4e54c8;
+}
+
+button:hover{
+  /* transform: scale(1.2); */
+  border: 3px solid #4e54c8;
+  background-color: #4e54c8;
+  color: white;
+
 }
 
 
