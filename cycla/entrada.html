@@ -31,7 +31,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/cycla/entrada.html">Operador</a>
               <li class="nav-item">
-                <a class="nav-link" href="#">Admin</a>
+                <a class="nav-link" href="/cycla/admin.html">Admin</a>
             </li>
             
           </ul>
@@ -40,35 +40,35 @@
       </div>
     </div>
   </nav>
-<main class="">
+<main class="w-50 p-3">
   
-  <div class="d-flex">
+  <div>
   <h1>Calculadora de Reciclagem</h1>
   </div>
   
-  <div class="rounded border border-primary my-2 ustify-content-center">
+  <div class="py-2 d-flex justify-content-between  my-2">
   <label for="vidroPeso ">Vidro: 1 Ponto:</label>
-  <input type="number" id="vidroPeso" onchange="calcular()">
+  <input type="number" class="form-control w-75" id="vidroPeso" onchange="calcular()">
   </div>
   
-  <div>
+  <div class="d-flex justify-content-between  my-2">
   <label for="papelPeso">Papel: 10 Pontos:</label>
-  <input type="number" id="papelPeso" onchange="calcular()">
+  <input type="number" class="form-control w-75" id="papelPeso" onchange="calcular()">
   </div>
   
 
-  <div>
+  <div class="d-flex justify-content-between  my-2">
   <label for="metalPeso">Metal: 15 Pontos:</label>
-  <input type="number" id="metalPeso" onchange="calcular()">
+  <input type="number" class="form-control w-75" id="metalPeso" onchange="calcular()">
   </div>
 
-  <div>
+  <div class="d-flex justify-content-between  my-2">
   <label for="plasticoPeso">Plástico: 25 Pontos:</label>
-  <input type="number" id="plasticoPeso" onchange="calcular()">
+  <input type="number" class="form-control w-75" id="plasticoPeso" onchange="calcular()">
   </div>
 
   <div>
-  <p>Total geral: <span id="totalGeral">0</span></p>
+  <h2>Total geral: <span id="totalGeral">0</span></h2>
   </div>
 
   </main>

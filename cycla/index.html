@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/cycla/styles.css">
 </head>
 
-<body class="d-flex align-items-center justify-content-center py-4 bg-success bg-gradient" >
+<body class="d-flex align-items-center justify-content-center py-4 my-5 bg-success bg-gradient" >
   
   <nav class="navbar navbar-light bg-light fixed-top">
     <div class="container-fluid">
@@ -31,7 +31,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/cycla/entrada.html">Operador</a>
               <li class="nav-item">
-                <a class="nav-link" href="#">Admin</a>
+                <a class="nav-link" href="/cycla/admin.html">Admin</a>
             </li>
             
           </ul>
@@ -46,24 +46,19 @@
 
   <form class="w-100 m-auto"> 
     <img class="mb-4" src="/cycla/img/reshot-icon-recycling-WRG8MN64P5.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Consulte sua pontuação</h1>
 
     <div class=" form-floating py-2">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="txt" class="form-control" id="floatingInput" placeholder="p-00000">
+      <label for="floatingInput">Código</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+      <input type="txt" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">CPF</label>
     </div>
 
-    <div class="form-check text-start my-3">
-      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Remember me
-      </label>
-    </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+   
+    <button class="btn btn-primary w-100 my-2" type="submit">Sign in</button>
     </form>
 
     </main>
