@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Reciclagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Reciclagem</h1>
+  
+  <label for="vidroPeso">Vidro PESO TOTAL:</label>
+  <input type="number" id="vidroPeso" onchange="calcular()">
+  
+  <label for="papelPeso">Papel PESO TOTAL:</label>
+  <input type="number" id="papelPeso" onchange="calcular()">
+  
+  <label for="metalPeso">Metal PESO TOTAL:</label>
+  <input type="number" id="metalPeso" onchange="calcular()">
+  
+  <label for="plasticoPeso">Plástico PESO TOTAL:</label>
+  <input type="number" id="plasticoPeso" onchange="calcular()">
+  
+  <p>Total geral: <span id="totalGeral">0</span></p>
+
+
+  <script src="/cycla/Js/calculadoracycla.js"></script>
+</body>
+</html>
