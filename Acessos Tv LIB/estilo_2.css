@@ -72,15 +72,13 @@ button:hover{
 
 
   .conteudo{    
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, min(100%, 30rem));
-    min-height: 100vh;
-    place-items: start;
-    gap: 1rem;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui espaço uniformemente entre as colunas */
+    gap: 1rem; /* Espaço entre as colunas */
     padding: 1rem;
-    color: var(--primary);
-    border: 3px solid blue;    
+    min-height: 100vh;
+ 
    
   }
 
@@ -112,12 +110,20 @@ button:hover{
       transition: all 0.35s;
       
       
+      
     }
     .tab input:checked ~ .tab__content {
       max-height: 200rem;
       max-width: 650px;
       
     }
+
+    .conteudo > section {
+      flex: 1 1 calc(33.33% - 1rem); /* 33.33% da largura menos o gap */
+      box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+      margin-bottom: 1rem; /* Espaço inferior entre as linhas */
+      color: var(--primary);
+      border: 3px solid blue; 
     
     /* Visual styles */
     .accordion {
@@ -156,6 +162,16 @@ button:hover{
       margin: 0;
       padding: 1rem;
     }
+
+    .tab__content a {
+      display: flex;
+      border: 1px solid #000;
+      margin: 1px;
+      padding: 10px;
+      border-radius: 5px
+    }
+
+
     .tab__close {
       justify-content: flex-end;
       padding: 0.5rem 1rem;
