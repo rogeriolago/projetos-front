@@ -1,0 +1,51 @@
+body{
+  font-family: 'Exo', sans-serif;
+}
+
+.head {
+  font-size: 24px;
+  background: #4e54c8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  height: 120px;
+  width: 100%;
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+  .head {
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto; /* Ajusta a altura automaticamente */
+    padding: 20px 0; /* Opcional: adiciona um padding para espaÃ§ar */
+  }
+}
+
+.card-sys{
+
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px auto;
+  max-width: 1200px;
+  gap: 10px;
+  
+  
+  
+}
+.card-sys img{
+  
+  width: min-content;
+  height: 40px;
+}
+
+.card{
+  
+}
