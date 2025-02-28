@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, Response
+import requests
 import sqlite3
+from bs4 import BeautifulSoup
+import os
 
 app = Flask(__name__)
 app.secret_key = 'sua_chave_secreta'
@@ -19,8 +22,9 @@ def init_db():
 
     # Adiciona os usuários apenas se ainda não existirem no banco
     users = [
-        ('user1', '1234', 'admin'),
-        ('user2', '1234', 'viewer')
+        ('admin', '1234', 'admin'),
+        ('sistemas', '1234', 'sistemas'),
+        ('expansao', '1234', 'expansao')
     ]
     for user in users:
         c.execute('SELECT * FROM users WHERE username = ?', (user[0],))
@@ -29,6 +33,9 @@ def init_db():
 
     conn.commit()
     conn.close()
+
+
+
 
 # Rota de login
 @app.route('/', methods=['GET', 'POST'])
@@ -53,12 +60,43 @@ def login():
     return render_template('login.html')
 
 # Rota protegida para exibir as divs
-@app.route('/hello')
+@app.route('/acessos')
 def hello():
     if 'username' in session:
-        return render_template('hello.html')
+        return render_template('index.html')
     else:
         return redirect(url_for('login'))
+
+
+@app.route('/proxy_zabbix')
+def proxy_zabbix():
+    if 'role' not in session or session['role'] not in ['admin', 'sistemas', 'expansao']:
+        return "Acesso não autorizado!", 403
+
+    # URL do site que você deseja proxyficar
+    target_url = "https://rogeriolago.github.io/"  # Substitua pelo seu URL alvo
+    
+    # Realiza a requisição GET para o site
+    response = requests.get(target_url)
+    
+    # Verifica se a resposta foi bem-sucedida
+    if response.status_code != 200:
+        return f"Erro ao acessar o site: {response.status_code}", response.status_code
+    
+    # Modifica o conteúdo HTML da resposta
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Modifica todas as URLs dentro do HTML
+    for tag in soup.find_all(['link', 'script', 'img']):
+        if tag.name == 'link' and tag.get('href'):
+            tag['href'] = url_for('static', filename=tag['href'].replace(target_url, ''))
+        elif tag.name == 'script' and tag.get('src'):
+            tag['src'] = url_for('static', filename=tag['src'].replace(target_url, ''))
+        elif tag.name == 'img' and tag.get('src'):
+            tag['src'] = url_for('static', filename=tag['src'].replace(target_url, ''))
+
+    # Retorna o HTML modificado
+    return Response(str(soup), status=response.status_code, content_type=response.headers['Content-Type'])
 
 # Rota para logout
 @app.route('/logout')

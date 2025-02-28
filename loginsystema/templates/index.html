@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+<body>
+    <h1>Acessos Tecnologia</h1>
+    <p>Usuário logado: {{ session['username'] }} | <a href="{{ url_for('logout') }}">Sair</a></p>
+
+    {# Verifica o papel do usuário para mostrar as DIVs #}
+    <section class="cards">
+    {% if session['role'] in ['admin', 'sistemas', 'expansao'] %}
+        <div class="card">
+            <h2>ZABBIX</h2>
+            <a href="{{ url_for('proxy_zabbix') }}" class="botao">Acessar</a>
+        </div>
+    {% endif %}
+    
+    {# DIV 2 é visível para todos #}
+    {% if session['role'] in ['admin', 'sistemas', 'expansao'] %}
+        <div class="card">
+            <h2>GRAFANA</h2>
+        </div>
+    {% endif %}
+
+    {% if session['role'] in ['admin', 'sistemas', 'expansao'] %}
+    <div class="card">
+        <h2>GLPI</h2>
+    </div>
+    {% endif %}
+
+    {% if session['role'] in ['admin', 'sistemas', 'expansao'] %}
+    <div class="card">
+        <h2>OPENPROJECT</h2>
+    </div>
+    {% endif %}
+
+    {% if session['role'] in ['admin', 'expansao'] %}
+    <div class="card">
+        <h2>ACESSO INTERIOR</h2>
+    </div>
+    {% endif %}
+
+    {% if session['role'] in ['admin', 'sistemas'] %}
+    <div class="card">
+        <h2>CONTROLE MIKROTIK
+
+        </h2>
+    </div>
+    {% endif %}    
+
+
+    </section>
+    
+
+    
+</body>
+</html>
