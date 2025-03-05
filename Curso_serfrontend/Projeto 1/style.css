@@ -1,0 +1,26 @@
+h1{
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+header{
+    background: cornflowerblue;
+    text-align: center;
+    height: 50vh;
+    font-size: 20px;
+}
+
+
+.menu{
+    border: red solid 1px;
+}
+
+.menu ul li{
+    background: red;
+    opacity: 90%;
+    padding: 10px 10px;
+    display:inline-block;
+}
+.menu p{
+    display: block;
+    background-color: aquamarine;
+}
