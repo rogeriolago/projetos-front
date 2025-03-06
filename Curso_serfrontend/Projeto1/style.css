@@ -10,11 +10,20 @@ header{
     background-image: url('/Curso_serfrontend/Projeto1/bg-3.jpg');
     background-size:cover; /* Ajusta a imagem para caber inteira */
     background-repeat: no-repeat; /* Impede repetição */
-    background-position: top; /* Centraliza a imagem */
+    background-position: right ; /* Centraliza a imagem */
     font-size: 20px;
     color: white;
-    border: greenyellow solid 1px;
+    text-align: center;
+    padding-top: 1px;
+
+
 }
+
+header h1{
+    font-size: 56px;
+}
+
+
 
 
 .menu{
@@ -34,15 +43,15 @@ header{
 }
 
 .titulos{
-    display: grid;
     justify-content: center;
     align-content: center;
-    border: greenyellow solid 1px;
     height: 70vh ;
 
 }
 .titulos p{
+    display: inline-block;
     padding: 10px;
+    font-size: 18px;
     border-bottom: white solid 2px;
     background: rgba(24, 5, 5, 0.5);
 }
@@ -64,6 +73,7 @@ article h2{
     width: 100%;
     height: 30px;
     background: rgb(223, 220, 220);
+    padding: 10px 0;
 
 }
 
