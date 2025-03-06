@@ -1,54 +1,66 @@
-body{
+body {
     margin: 0 auto;
     background: rgb(172, 169, 169);
     font-family: sans-serif;
 }
-h1{
+
+h1 {
     text-transform: uppercase;
 }
-header{
+
+header {
     background-image: url('/Curso_serfrontend/Projeto1/bg-3.jpg');
-    background-size:cover; /* Ajusta a imagem para caber inteira */
-    background-repeat: no-repeat; /* Impede repetição */
-    background-position: right ; /* Centraliza a imagem */
+    background-size: cover;
+    /* Ajusta a imagem para caber inteira */
+    background-repeat: no-repeat;
+    /* Impede repetição */
+    background-position: right;
+    /* Centraliza a imagem */
     font-size: 20px;
     color: white;
     text-align: center;
     padding-top: 1px;
+    margin-bottom: 32px;
 
 
 }
 
-header h1{
+header h1 {
     font-size: 56px;
 }
 
 
 
 
-.menu{
+.menu {
     text-align: end;
     width: 95%;
     margin: 0 auto;
 
 }
 
-.menu ul li{
+.menu ul li {
     background: rgba(24, 5, 5, 0.5);
     border: white solid 1px;
     opacity: 90%;
     padding: 10px 10px;
-    display:inline-block;
+    display: inline-block;
+    letter-spacing: 3px;
 
 }
 
-.titulos{
+.menu ul li:hover {
+    background: rgba(24, 5, 5, 0.1);
+}
+
+.titulos {
     justify-content: center;
     align-content: center;
-    height: 70vh ;
+    height: 70vh;
 
 }
-.titulos p{
+
+.titulos p {
     display: inline-block;
     padding: 10px;
     font-size: 18px;
@@ -56,38 +68,38 @@ header h1{
     background: rgba(24, 5, 5, 0.5);
 }
 
-article{
+article {
     width: 95%;
-    margin: 20px auto;
-    
+    margin: 0 auto;
+
 }
-article div{
+
+article div {
     margin-bottom: 20px;
     background: white;
     padding: 10px;
 }
 
-article h2{
-    display: inline-block;
-    align-content: center;
-    width: 100%;
-    height: 30px;
+article h2 {
     background: rgb(223, 220, 220);
-    padding: 10px 0;
+    padding: 10px;
 
 }
 
-article a{
-    display: inline-block;
+article a {
+    display: block;
     background: rgb(191, 200, 248);
-    width: 100px;
+    width: fit-content;
     height: 40px;
     text-align: center;
     align-content: center;
+    border-radius: 6px;
+    margin-left: auto;
+    padding: 5px 10px;
 }
 
 
-footer{
+footer {
     background: rgb(95, 95, 95);
     color: white;
     height: 50px;
